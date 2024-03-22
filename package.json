@@ -5,8 +5,8 @@
   "scripts": {
     "start-web:dev": "nx run myworkspace:serve:development",
     "build": "npx nx build myworkspace",
-    "deploy": "nx build myworkspace --prod && ngh --dir=dist/apps/myworkspace",
-    "test": "nx test myapp",
+    "deploy": "mv dist/apps/myworkspace/browser/* docs/ && ngh --dir=docs/",
+    "test": "nx test myapp"
   },
   "private": true,
   "dependencies": {
